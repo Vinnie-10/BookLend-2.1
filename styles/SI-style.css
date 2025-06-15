@@ -1,0 +1,139 @@
+/* Reset and base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+@font-face {
+  font-family: "Fira Sans";
+  src:  url('../fonts/fira/eot/FiraSans-Regular.eot');
+  src:  url('../fonts/fira/eot/FiraSans-Regular.eot') format('embedded-opentype'),
+        url('../fonts/fira/woff2/FiraSans-Regular.woff2') format('woff2'),
+        url('../fonts/fira/woff/FiraSans-Regular.woff') format('woff'),
+        url('../fonts/fira/ttf/FiraSans-Regular.ttf') format('truetype');
+  }
+  
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #9274b4;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+  /* Login screen */
+.login-screen {
+    opacity: 1; 
+    pointer-events: all;
+    background-color:#49346a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.logboxpost h2{
+  position: relative;
+  bottom: 8px;
+}
+
+.BG-support{
+  position: relative;
+  right: 250px;
+  bottom: 5px;
+}
+  
+  /* Login box container */
+.login-box {
+    background-color: #d4aaf7; 
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 50px #d5a2ee;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+  
+  /* Logo styling */
+.login-box .logo {
+    margin-bottom: 10px;
+}
+  
+.logo img {
+    width: 180px;
+    height: auto;
+    margin-bottom: 10px;
+}
+  
+  /* Heading */
+.login-screen h2 {
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+  
+  /* Inputs */
+.login-box input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: none;
+    font-size: 14px;
+}
+
+.input-post{
+  position: relative;
+  bottom: 10px;
+}
+  
+  /*Forgot Password*/
+.forgot {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-right: 210px;
+  font-size: 15px; 
+  color: #4f3a6d;
+  position: relative;
+  bottom: 5px;
+  right: 3px;
+  text-decoration: none;
+}
+
+  /* Login button */
+.login-box button {
+    background-color: #7a5ea5;
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    position: relative;
+    top: 4px;
+}
+  
+  /* Sign up text */
+  .signup-text {
+    font-size: 14px;
+    margin-top: 15px;
+    color: #ffffff;
+}
+
+.signup-text a {
+    color: #ffffff;
+    text-decoration: bold;
+}
+
+.su-post {
+  position: relative;
+  top: 10px;
+}
+  

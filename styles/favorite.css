@@ -1,0 +1,482 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #8e31b9;
+    color: #8e31b9;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar, body::-webkit-scrollbar {
+  display: none;                 
+}
+
+header {
+  background-color: #d4aaf7;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 2px 10px;
+}
+
+.logo-toko img{
+    width: 150px;
+    position: relative;
+    top: 5px;
+}
+
+.search-bar{
+  display: flex;
+  gap: 10px;
+}
+
+.search-bar input{
+    border-radius: 25px;
+    border-color: purple;
+    padding: 10px;
+    width: 204px;
+}
+
+.search-bar button{
+  border: none;
+  background-color: #8e31b9;
+  border-radius: 25px;
+  width: 40px;
+  height: 40px;
+}
+
+.menu a{
+    text-decoration: none;
+    color: #78229f;
+    padding: 20px;
+    font-weight: 750;
+    font-size: 18px;
+}
+
+.user-profile{
+    display: flex;
+    gap: 15px;
+}
+
+.user-profile img{
+    width: 40px;
+    border-radius: 50%;
+}
+
+.user-profile h3{
+  display: flex;
+  align-items: center;
+  color:rgb(94, 69, 114);
+}
+
+.tombol-notif button{
+  background-color: #8e31b9;
+  border-radius: 25px;
+  border: none;
+}
+
+.tombol-notif img{
+  width: 40px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  padding: 8px;
+  padding-top: 5px;
+  position: relative;
+  top: 2px;
+}
+
+.drop-notif-wrap{
+    position: absolute;
+    top: 7%;
+    right: 1%;
+    width: 350px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    z-index: 5;
+}
+
+.judul-notif{
+  padding-bottom: 15px;
+  font-size: 12px;
+  color: #8e31b9;
+}
+
+.drop-notif-wrap.open-notif{
+  max-height: 296px;
+}
+
+.drop-notif{
+  background-color: #f6ddff;
+  padding: 20px;
+  margin: 10px;
+}
+
+.notif{
+  align-items: center;
+  text-decoration: none;
+  color:#78229f;
+  padding: 3px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.pembatas{
+  width: 329.222px;
+  position: relative;
+  right: 20px;
+}
+
+.prf-menu-wrap{
+  position: absolute;
+  top: 7%;
+  right: 3%;
+  width: 320px;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.5s;
+  z-index: 5;
+}
+
+.prf-menu-wrap.open-menu{
+  max-height: 400px;
+}
+
+.prf-menu{
+  background-color: #f6ddff;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: #22539f;
+}
+
+.ingfo{
+  display: flex;
+  align-items: center;
+  position: relative;
+  bottom: 7.5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.ingfo h2{
+  font-weight: 500;
+  color: #78229f;
+}
+
+.ingfo img{
+  width: 60px;
+  border-radius: 100px;
+  margin-right: 15px;
+}
+
+.prf-menu-link{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color:#78229f;
+  padding: 3px;
+  margin-top: 5px;
+}
+
+.prf-menu-link img{
+  width: 45px;
+  border-radius: 50%;
+  padding: 8px;
+  margin-right: 15px;
+  background-color: #8e31b9;
+}
+
+.prf-menu-link:hover p{
+  transform: translate(15px);
+  transition: transform 0.5s;
+  font-weight: 600px;
+}
+
+.hamburger{
+  display:none;
+}
+
+.container{
+    width: 80%;
+    min-height: 60vh;
+    margin: 100px auto 100px auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+    background-color: #f6f0ff;
+    border-radius: 35px;
+    gap: 30px;
+}
+  
+.searchFav {
+    font-size: 30px;
+    width: 90%;
+}
+  
+.searchFavInput {
+    display: flex;
+    align-items: center;
+    background: rgb(221, 221, 221);;
+    border-radius: 20px;
+    padding: 8px 12px;
+}
+  
+.searchFavInput input {
+    border: none;
+    background: transparent;
+    flex: 1;
+    padding: 10px;
+    font-size: 18px;
+    outline: none;
+}
+  
+.list{
+    width: 80%;
+    height: auto;
+    background-color: rgb(221, 221, 221);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    cursor: pointer;
+}
+
+.left{
+    width: 75%;
+}
+
+.tersedia, .tidak{
+    width: 25%;
+    height: auto;
+    border-radius: 15px;
+    background-color: rgb(178, 233, 185);
+    color: rgb(0, 152, 20);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.tidak{
+    background-color: rgb(227, 145, 145);
+    color: rgb(104, 16, 3);
+    text-align: center;
+}
+
+.book-list {
+    display: flex;
+    padding: 16px;
+    align-items: stretch;
+    gap: 20px;
+}
+
+.book-list img{
+    width: 120px;
+    height: auto;
+}
+
+.book-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    flex: 1;
+}
+
+.book-info h1, .book-info h3{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    width: 100%;
+}
+
+.book-info h3 {
+    margin: 0;
+    font-size: 16px;
+}
+  
+.book-info .rating {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+}
+
+.Userstar{
+    display: flex;
+    gap: 8px;
+    color: gold;
+    font-size: 50px;
+    align-items: center;
+}
+
+.rating{
+    color: black;
+    vertical-align: bottom;
+    position: relative;
+    font-size: 20px !important;
+    top: 4px;
+}
+
+.vertical{
+    width: 2px;
+    background-color: black;
+    margin: 0 10px;
+}
+
+.book-card {
+    display: flex;
+    background: white;
+    border-radius: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    overflow: hidden;
+    cursor: pointer;
+}
+  
+.book-image {
+    width: 160px;
+    height: 120px;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    color: #999;
+}
+
+.ulasan{
+    width: 25%;
+    height: auto;
+    border-radius: 15px;
+    background-color: rgb(141, 142, 141);
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.popup-bg{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(83, 83, 83, 0.842);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-box{
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.popup-box img{
+    width: 300px;
+}
+
+.phrase{
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+}
+
+.close{
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 5px 10px;
+}
+
+@media (max-width: 678px) {
+    header{
+      flex-direction: row;
+      gap: 10px;
+    }
+    .menu, .user-profile, .tombol-notif {
+      display: none;
+    }
+    .menu.show {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 10px;
+    }
+    .menu.show a{
+      padding: 10px 20px;
+    }
+    .hamburger {
+      display: block;
+      font-size: 40px;
+      color: #78229f;
+      cursor: pointer;
+      padding-bottom: 8px;
+    }
+
+    .container{
+        width: 80%;
+        margin: 30px auto;
+    }
+    .container h1{
+      font-size: 28px;
+    }
+    .list{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+    .left {
+        width: 100%;
+    }
+    .book-list{
+        align-items: center;
+        flex-direction: column;
+        gap: 5px;
+        padding-bottom: 0px;
+    }
+    .vertical{
+      display: none;
+    }
+    .book-list img {
+        width: 150px;
+        height: 200px;
+    }
+
+    .book-info h1{
+        font-size: 30px;
+        text-align: center;
+    }
+    .book-info h2{
+      font-size: 20px;
+    }
+    .tersedia, .tidak, .ulasan {
+        width: 100%;
+        font-size: 22px;
+        padding: 10px;
+        text-align: center;
+    }
+    .vertical{
+        height: 200px;
+        margin: 0;
+    }
+}
