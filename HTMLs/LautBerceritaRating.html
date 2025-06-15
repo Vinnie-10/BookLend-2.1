@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/book.css">
+</head>
+<body>
+    <header>
+        <div class="logo-toko">
+            <img src="../fotoww/BookLend  Smart Borrowing.png" alt="" class="">
+        </div>
+
+        <form class="search-bar">
+            <input type="text" placeholder="Search ... ">
+            <button type="submit"><img src="../ggl-rsc/search_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt=""></button>
+        </form>
+
+        <div class="hamburger" onclick="toggleHamburger()">≡</div>
+
+        <div class="menu">
+            <a href="home.html">Beranda</a>
+            <a href="BookReservation.html">Reservasi</a>
+            <a href="BookFavorite.html">Favorite</a>
+            <a href="BookHistory.html">Riwayat Peminjaman</a>
+        </div>
+
+        <div class="user-profile">
+            <img src="../fotoww/pfp.png" alt="" onpointerenter="toggleMenu()">
+            <h3>Hi, dummy_123!</h3>
+        </div>
+
+        <div class="tombol-notif">
+            <form action="notif.html">
+                <button type="submit"><img src="../ggl-rsc/notifications_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" 
+                alt="" onpointerenter="toggleNotif()"></button>
+            </form>
+        </div>
+
+        <div class="drop-notif-wrap" id="notifDrop" onpointerleave="toggleNotif()">
+            <div class="drop-notif">
+                <div class="judul-notif">
+                    <h1>Notifikasi</h1>
+                </div>
+                <hr>
+
+                <div class="notif" onclick="window.location.href='BookExtension.html'">
+                    <h3>Pengembalian Buku</h3>
+                    <p>[REMINDER] H-2 Mengembalikan Buku Nebula. Klik disini jika ingin perpanjang.</p>
+                </div>
+                <hr class="pembatas">
+                <div class="notif" onclick="window.location.href='Bintang.html'">
+                    <h3>Bintang</h3>
+                    <p>[BARU] Bintang baru saja di-upload oleh pihak perpustakaan.</p>
+                </div>
+                <hr class="pembatas">
+                <div class="notif" onclick="window.location.href='BookRating.html'">
+                    <h3>Beri Ulasan</h3>
+                </div>
+                <hr class="pembatas">
+            </div>
+        </div>
+
+        <div class="prf-menu-wrap" id="pfpMenu" onpointerleave="toggleMenu()">
+            <div class="prf-menu" >
+                <div class="ingfo">
+                    <img src="../fotoww/pfp.png" alt="">
+                    <h2>dummy_123</h2>
+                </div>
+                <hr>
+
+                <a href="#" class="prf-menu-link"><img 
+                    src="../ggl-rsc/edit_square_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" 
+                    alt=""><p>Sunting Profil</p></a>
+                <a href="#" class="prf-menu-link"><img 
+                    src="../ggl-rsc/settings_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" 
+                    alt=""><p>Setelan & Privasi</p></a>
+                <a href="#" class="prf-menu-link"><img 
+                    src="../ggl-rsc/account_circle_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" 
+                    alt=""><p>Akunku</p></a>
+                <a href="../HTMLs/sign-in.html" class="prf-menu-link"><img 
+                    src="../ggl-rsc/logout_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" 
+                    alt=""><p>Keluar</p></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="hori">
+                <div class="left">
+                    <div class="box">
+                        <div class="swipe">
+                            <img src="../fotoww/cover.png" alt="">
+                            <img src="../fotoww/back.jpg" alt="">
+                            <img src="../fotoww/inside.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <h1>Laut Bercerita</h1>
+                    <div class="line"></div>
+                    <div class="ratingpoint">4.0</div>
+                    <div class="stars">
+                        <div class="star">★</div>
+                        <div class="star">★</div>
+                        <div class="star">★</div>
+                        <div class="star">★</div>
+                        <div class="star">☆</div>
+                    </div>
+                    <div class="qty">(3 Ratings)</div>
+                    <div class="category">
+                        <div class="wrap">
+                            <div class="sort">
+                                <div class="sort-button" id="newest" style="background-color:  rgb(225, 211, 254);">Terbaru</div>
+                                <div class="sort-button" id="highest" style="background-color:  rgb(44, 201, 0);">Tertinggi</div>
+                                <div class="sort-button" id="lowest" style="background-color:  rgb(242, 72, 34);">Terendah</div>
+                            </div>
+                            <br>
+                            <div class="scroll-rating">
+                                <div class="content">
+                                    <div class="newest-rating" id="review1">
+                                        <img src="../fotoww/profile.png" alt="">
+                                        <div class="user-rating">
+                                            <h4>Budi Ayanto</h4>
+                                            <div class="stars">
+                                                <div class="Userstar">★</div>
+                                                <div class="Userstar">★</div>
+                                                <div class="Userstar">★</div>
+                                                <div class="Userstar">★</div>
+                                                <div class="Userstar">☆</div>
+                                            </div>
+                                        </div>
+                                        <p>Laut Bercerita merupakan tulisan dari Leila S.Chudori yang merupakan buku yang sangat direkomendasikan untuk orang - orang yang suka membaca novel</p>
+                                        <div class="grey-line"></div>
+                                    </div>
+                                    <div class="newest-rating" id="review2">
+                                        <img src="../fotoww/profile.png" alt="">
+                                        <div class="user-rating">
+                                            <h4>Stella</h4>
+                                            <div class="stars">
+                                                <div class="Userstar">★</div>
+                                                <div class="Userstar">★</div>
+                                                <div class="Userstar">★</div>
+                                                <div class="Userstar">☆</div>
+                                                <div class="Userstar">☆</div>
+                                            </div>
+                                        </div>
+                                        <p>Laut Bercerita ini tidak cocok dengan selera saya karena genre yang saya suka adalah horror.</p>
+                                        <div class="grey-line"></div>
+                                    </div>
+                                    <div class="newest-rating" id="review3">
+                                        <img src="../fotoww/profile.png" alt="">
+                                        <div class="user-rating">
+                                            <h4>Zedy</h4>
+                                            <div class="stars">
+                                                <div class="Userstar">★</div>
+                                                <div class="Userstar">★</div>
+                                                <div class="Userstar">★</div>
+                                                <div class="Userstar">★</div>
+                                                <div class="Userstar">★</div>
+                                            </div>
+                                        </div>
+                                        <p>Laut Bercerita sangat bagus, kualitas buku masih sangat terjaga dan tersampul dengan rapi.</p>
+                                        <div class="grey-line"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br><br>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <button type="submit" class="back" onclick="window.location.href='LautBercerita.html'">Back</button> 
+    </div>
+    <script src="../js/scriptview.js"></script>
+</body>
+</html>
