@@ -46,8 +46,6 @@ function validateSubmit(){
         const maxDate = new Date(dateInput.max);
         validDate = selectedDate >= minDate && selectedDate <= maxDate;
     }
-
-    button.disabled = !(checkboxes && validDate);
 }
 
 dateInput.addEventListener('change', validateSubmit);
@@ -59,6 +57,26 @@ borrowingLimit();
 function showqr(){
     document.getElementById('popup').style.display = "flex";
 }
+
+button.addEventListener("click", function(e) {
+    const date1 = dateInput.value;
+    const checkboxes = checkbox1.checked && checkbox2.checked;
+
+    let validDate = false;
+    if (date1) {
+        const selectedDate = new Date(date1);
+        const minDate = new Date(dateInput.min);
+        const maxDate = new Date(dateInput.max);
+        validDate = selectedDate >= minDate && selectedDate <= maxDate;
+    }
+
+    if (checkboxes && validDate) {
+        showqr();
+    } else {
+        e.preventDefault(); // prevent default action (if any)
+        alert("Harap isi tanggal dan centang kedua pernyataan terlebih dahulu.");
+    }
+});
 
 function toggleHamburger() {
     const menu = document.querySelector('.menu');
