@@ -102,3 +102,9 @@ body {
 .si-post a{
     color: #ffffff;
 }
+
+@media (max-width: 768px){
+    .support{
+        display: none;
+    }
+}
