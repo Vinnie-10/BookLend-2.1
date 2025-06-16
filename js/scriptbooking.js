@@ -49,8 +49,6 @@ function validateSubmit(){
     const date2 = dateInput2.value; 
     const checkboxes = checkbox1.checked && checkbox2.checked;
     const date = date1 && date2 && new Date(date2) <= new Date(dateInput2.max);
-    
-    button.disabled = !(checkboxes && date);
 }
 
 dateInput1.addEventListener('change', borrowingLimit);
@@ -59,6 +57,19 @@ checkbox1.addEventListener('change', validateSubmit);
 checkbox2.addEventListener('change', validateSubmit);
 
 validateSubmit();
+
+button.addEventListener("click", function (e) {
+    const date1 = dateInput1.value;
+    const date2 = dateInput2.value;
+    const checkboxes = checkbox1.checked && checkbox2.checked;
+    const validDate = date1 && date2 && new Date(date2) <= new Date(dateInput2.max);
+
+    if (checkboxes && validDate) {
+        popup();
+    } else {
+        alert("Harap isi tanggal dan centang kedua pernyataan terlebih dahulu.");
+    }
+});
 
 function popup(){
     document.getElementById('popup').style.display = "flex";
