@@ -137,3 +137,41 @@ body {
   top: 10px;
 }
   
+@media (max-width: 768px){
+  body {
+    flex-direction: column;
+    overflow: auto;
+  }
+  
+  .BG-support {
+    display: none;
+  }
+
+  .logboxpost {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .login-box {
+    max-width: 90%;
+    box-shadow: none;
+    padding: 30px 20px;
+  }
+
+  .forgot {
+    padding-right: 0;
+    text-align: left;
+    display: block;
+    margin-top: 5px;
+  }
+
+  .signup-text {
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .login-box input {
+    font-size: 16px;
+  }
+}
